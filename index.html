@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weathery — Real Weather</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="theme-auto">
+  <div id="bg-layer" class="bg-layer"></div>
+
+  <div class="app">
+    <header class="header">
+      <div class="brand">
+        <div class="logo"><img src="image.png" alt=""></div>
+        <div>
+          <div class="app-title">Mausam4U</div>
+          <div class="app-sub">Weather Forecast</div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="themeToggle" class="ctrl small">Light</button>
+        <button id="unitBtn" class="ctrl small">°C</button>
+      </div>
+    </header>
+
+    <main class="main-card">
+      <section class="search-row">
+        <input id="cityInput" type="text" placeholder="Search city / state / country" />
+        <button id="searchBtn" class="btn">Search</button>
+        <button id="geoBtn" class="btn alt">Use my location</button>
+      </section>
+
+      <div id="message" class="message hidden"></div>
+
+      <section id="weatherWrap" class="weather-wrap hidden">
+        <div class="current">
+          <div class="left">
+            <div id="location" class="location">—</div>
+            <div id="time" class="time">—</div>
+            <div id="updateAt" class="update">—</div>
+            <div id="desc" class="desc">—</div>
+          </div>
+          <div class="right">
+            <div class="icon-box">
+              <img id="wIcon" alt="" src="" />
+            </div>
+            <div class="temps">
+              <div id="temp" class="temp">—</div>
+              <div id="feels" class="feels">Feels like —</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-row">
+          <div class="stat"><small>Humidity</small><b id="hum">—</b></div>
+          <div class="stat"><small>Wind</small><b id="wind">—</b></div>
+          <div class="stat"><small>Pressure</small><b id="pres">—</b></div>
+          <div class="stat"><small>Sunrise / Sunset</small><b id="sun">—</b></div>
+        </div>
+
+        <h4 class="forecast-title">5-day Forecast (3h)</h4>
+        <div id="forecast" class="forecast"></div>
+      </section>
+      <footer class="footer">Developed by AV</footer>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
